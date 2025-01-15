@@ -1,0 +1,173 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+#contenedor {
+  background-image: linear-gradient(
+    rgba(0, 0, 0, 0.5),
+    rgba(0, 0, 0, 0.5)
+  );
+
+  background-image: url(Image20241219193025.png);
+  background-size: cover;
+  background-position: center;
+  color: white;
+  height: 100vh;
+  width: 100wh;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding: 50px 100px;
+
+
+  #Titulo {
+     
+
+    h1{
+      color: white;
+      font-size: 20px;
+    }
+    h2 {
+      color: white;
+      font-size: 30px;
+    }
+
+    button {
+      border-radius: 30px;
+      border: solid 1px white;
+      background-color: transparent;
+      padding: 16px 22px;
+      color: white;
+      font-size: 15px;
+      display: grid;
+    } 
+  }
+  
+  #buscador {
+    
+    input {
+      border-radius: 30px;
+      border: solid 1px white;
+      background-color: transparent;
+      padding: 16px;
+      color: white;
+      font-size: 24px;
+      width: 200px;
+
+    }
+
+    &::placeholder {
+      color: white;
+     }
+  } 
+   
+}
+.galeria {
+  width: 100%;
+  height: 100px;
+}
+
+ 
+nav {
+  width: 100%;
+  height: 50px;
+  background-color: rgba(0, 0, 0, 0.137);
+  display: grid;
+  grid-template-columns: 3fr 2fr;
+  align-items: center;
+  position: fixed;
+  top: 0;
+
+  #Logo {
+  margin-left: 100px;
+ }
+  #logo-mobile {
+    display: none;
+    border: solid 1px white;
+    border-radius: 50%;
+    padding: 20px;
+  } 
+
+ .links {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 40;
+
+  .idiomas {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+
+    img {
+      margin-right: 40px;
+    }
+  }
+
+  a {text-decoration: none;
+    color: white;
+ }
+  .grey {
+  color: grey;
+ }
+  .registro {
+    display: grid;
+    grid-template-columns: 1fr  1px 1fr;
+    
+    a{
+      justify-self: center;
+    }
+
+    #bar {
+      height: 100%;
+      width: 1px;
+      background-color: white;
+    }
+  }
+ }
+}
+
+@media (max-width: 1000px){
+  
+  #contenedor {
+    background-image: url(Group\ 288.jpg);
+ }
+}
+
+
+@media (max-width: 900px){
+
+
+  nav {
+    #Logo {
+      display: none;
+    }
+
+    #logo-mobile {
+      display: inline;
+      margix: 50%;
+      height: 100px;
+    }
+
+    .links{
+      grid-template-columns: 1fr;
+
+      .idiomas{
+        grid-template-columns: 1fr;
+        justify-items: end;
+        a {
+          display: none;
+        }
+      }
+      .registro{
+        display: none;
+      }
+    }
+  }
+}
+
+
+
+
+
+  

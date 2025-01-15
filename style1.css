@@ -1,0 +1,296 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+
+
+
+.seccion {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+
+  .galeria {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 20px;
+
+    .primera {
+      grid-column: span 2;
+    }
+
+    .agrupar {
+      grid-column: span 5;
+      position: relative;
+
+      .textos {
+        position: absolute;
+        transform: translateY(-100%);
+        font-size: 30px;
+        padding: 20px;
+      }
+
+      .textosuno {
+        color: white;
+      }
+
+      .textosdos {
+        color: black;
+        background-color: white;
+        width: 100%;
+      }
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  .contenido {
+    display: grid;
+    padding-right: 100px;
+
+    .botones {
+      display: grid;
+      grid-template-columns: 1fr 3fr 1fr;
+      align-items: center;
+
+      .medio {
+        background-color: transparent;
+        border-radius: 48px;
+        height: fit-content;
+        font-size: 24px;
+        padding: 12px;
+      }
+
+      .direcciones {
+        background-color: transparent;
+        border: none;
+      }
+
+      .prev {
+        color: gray;
+      }
+
+      .next {
+        color: orange;
+      }
+    }
+
+    .textos {
+      font-size: 48px;
+      text-align: right;
+
+      h6 {
+        color: orange;
+        margin-bottom: 10px;
+      }
+    }
+  }
+}
+
+
+@media (max-width: 800px) {
+  .seccion {
+    grid-template-columns: 1fr;
+
+    .contenido {
+      display: none;
+    }
+  }
+
+
+  .section {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 50px 10px;
+    padding: 100px;
+
+    #img-mobile {
+      display: none;
+    }
+  }
+  
+   img {
+    max-width: 100%;
+    margin-bottom: 20px;
+  }
+   
+ 
+  
+  h5,
+  h4 { margin-left: 30px;
+    
+  }
+  
+  h4 {
+    font-size: 30px;
+  }
+  h5 {
+    font-size: 24px;
+    color: gray;
+  }
+  
+  @media (max-width: 1029px) {
+    section {
+      padding: 40px;
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+  
+  @media (max-width: 900px) {
+    section {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  @media (max-width: 600px) {
+    section {
+      grid-template-columns: 1fr;
+      gap: 10px;
+      
+      #grande {
+        display: none;
+      }
+      #img-mobile {
+        display: inline;
+        max-width: 100%;
+        margin-bottom: 20px;
+      }
+    }
+  
+    h4,
+    h5 {
+      display: none;
+    }
+  }
+  
+  footer {
+    width: 100%;
+    background-color: black;
+    margin-top: 300px;
+  
+    .negro {
+      color: white;
+      display: grid;
+      width: 90%;
+      margin: auto;
+      gap: 20px;
+  
+      .enlaces {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        font-size: 24px;
+  
+        .primera {
+          align-self: self-end;
+        }
+  
+        .segunda {
+          align-self: center;
+        }
+  
+        .tercera {
+          align-self: self-end;
+  
+          #separado {
+            margin-top: 20px;
+          }
+        }
+  
+        .medio {
+          justify-self: center;
+        }
+  
+        .ultima {
+          text-align: right;
+          align-self: self-end;
+        }
+  
+        ul {
+          li {
+            list-style: none;
+          }
+        }
+      }
+  
+      .copy {
+        border-top: solid 2px white;
+        p {
+          margin: 20px 0;
+          text-align: center;
+        }
+      }
+    }
+  
+    .gris {
+      background-color: #26282b;
+      width: 90%;
+      margin: auto;
+      transform: translateY(-50%);
+      display: grid;
+      grid-template-columns: repeat(2, 1fr); /* 1fr 1fr */
+      align-items: center;
+    
+
+      #textFooter {
+        font-size: 30px;
+        color: white;
+        justify-self: center;
+
+        span {
+          color: orange;
+          font-size: 15px;
+        }
+      }
+
+
+  
+      .segunda {
+        display: grid;
+        padding: 100px;
+        gap: 10px;
+  
+        input {
+          background-color: transparent;
+          border: solid 1px gray;
+          border-radius: 24px;
+          padding: 20px 30px;
+          font-size: 20px;
+        }
+        
+        button {
+          background-color: transparent;
+          border: solid 1px orange;
+          color: orange;
+          border-radius: 100px;
+          padding: 20px 30px;
+          font-size: 15px;
+          width: 60%;
+          justify-self: end;
+        }
+  
+        p {
+          margin-left: 20px;
+          color: white;
+}
+}
+}
+}
+
+@media (max-width: 1000px) {
+  Footer {
+    .gris {
+      display: none;
+    }
+    .segunda {
+      grid-template-columns: 1fr;
+      align-self: center;
+   
+    }
+  }
+
+ }
+ 
+}
