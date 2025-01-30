@@ -33,35 +33,37 @@
     }
 
     button {
-      border-radius: 30px;
+      border-radius: 40px;
       border: solid 1px white;
       background-color: transparent;
-      padding: 16px 22px;
+      padding: 10px 40px;
       color: white;
-      font-size: 15px;
+      font-size: 24px;
       display: grid;
     } 
   }
   
-  #buscador {
+  #buscador { 
+justify-self: end;
+  }
     
     input {
-      border-radius: 30px;
+      border-radius: 40px;
       border: solid 1px white;
       background-color: transparent;
-      padding: 16px;
+      padding: 10px 40px;
       color: white;
       font-size: 24px;
-      width: 200px;
+      width: 300px;
+      display: grid;
 
     }
 
     &::placeholder {
       color: white;
      }
-  } 
-   
 }
+
 .galeria {
   width: 100%;
   height: 100px;
@@ -70,7 +72,7 @@
  
 nav {
   width: 100%;
-  height: 50px;
+  height: 60px;
   background-color: rgba(0, 0, 0, 0.137);
   display: grid;
   grid-template-columns: 3fr 2fr;
@@ -78,21 +80,23 @@ nav {
   position: fixed;
   top: 0;
 
-  #Logo {
-  margin-left: 100px;
+  #logo {
+    display: inline;
+    margin-left: 30px;
  }
   #logo-mobile {
     display: none;
     border: solid 1px white;
     border-radius: 50%;
     padding: 20px;
+    
   } 
 
  .links {
   display: grid;
   grid-template-columns: 1fr 1fr;
   align-items: center;
-  gap: 40;
+  gap: 40px;
 
   .idiomas {
     display: grid;
@@ -114,7 +118,7 @@ nav {
     display: grid;
     grid-template-columns: 1fr  1px 1fr;
     
-    a{
+  a {
       justify-self: center;
     }
 
@@ -131,24 +135,29 @@ nav {
   
   #contenedor {
     background-image: url(Group\ 288.jpg);
- }
+  }
 }
 
 
-@media (max-width: 900px){
 
 
+@media (max-width:1000px){
   nav {
-    #Logo {
+    #logo {
       display: none;
-    }
+   }
+   #logo-mobile {
+    display: inline;
+    margin-left: 30px;
+  }
+}
+}
 
-    #logo-mobile {
-      display: inline;
-      margix: 50%;
-      height: 100px;
-    }
 
+
+
+@media (max-width: 900px){
+  nav {
     .links{
       grid-template-columns: 1fr;
 
@@ -165,9 +174,3 @@ nav {
     }
   }
 }
-
-
-
-
-
-  
